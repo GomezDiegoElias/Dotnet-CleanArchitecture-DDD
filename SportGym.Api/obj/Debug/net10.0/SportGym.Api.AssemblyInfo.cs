@@ -10,10 +10,11 @@
 using System;
 using System.Reflection;
 
+[assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("5a00a369-e167-4081-84d3-16af67a42d7c")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("SportGym.Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8197c14399a545066518fda0977a6668b8293818")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cef86e0356302896e21f9ea8e02ffdf2801cb337")]
 [assembly: System.Reflection.AssemblyProductAttribute("SportGym.Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SportGym.Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

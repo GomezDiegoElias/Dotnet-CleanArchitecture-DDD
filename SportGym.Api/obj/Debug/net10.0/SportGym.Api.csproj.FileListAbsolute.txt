@@ -40,3 +40,8 @@ D:\Documents\Proyectos Practicas y Cursos\REST API Following CLEAN ARCHITECTURE 
 D:\Documents\Proyectos Practicas y Cursos\REST API Following CLEAN ARCHITECTURE & DDD Tutorial - Amichai Mantinband\SportGym\SportGym.Api\bin\Debug\net10.0\SportGym.Infrastructure.pdb
 D:\Documents\Proyectos Practicas y Cursos\REST API Following CLEAN ARCHITECTURE & DDD Tutorial - Amichai Mantinband\SportGym\SportGym.Api\bin\Debug\net10.0\SportGym.Domain.pdb
 D:\Documents\Proyectos Practicas y Cursos\REST API Following CLEAN ARCHITECTURE & DDD Tutorial - Amichai Mantinband\SportGym\SportGym.Api\obj\Debug\net10.0\SportGym.Api.sourcelink.json
+D:\Documents\Proyectos Practicas y Cursos\REST API Following CLEAN ARCHITECTURE & DDD Tutorial - Amichai Mantinband\SportGym\SportGym.Api\bin\Debug\net10.0\Microsoft.IdentityModel.Abstractions.dll
+D:\Documents\Proyectos Practicas y Cursos\REST API Following CLEAN ARCHITECTURE & DDD Tutorial - Amichai Mantinband\SportGym\SportGym.Api\bin\Debug\net10.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\Documents\Proyectos Practicas y Cursos\REST API Following CLEAN ARCHITECTURE & DDD Tutorial - Amichai Mantinband\SportGym\SportGym.Api\bin\Debug\net10.0\Microsoft.IdentityModel.Logging.dll
+D:\Documents\Proyectos Practicas y Cursos\REST API Following CLEAN ARCHITECTURE & DDD Tutorial - Amichai Mantinband\SportGym\SportGym.Api\bin\Debug\net10.0\Microsoft.IdentityModel.Tokens.dll
+D:\Documents\Proyectos Practicas y Cursos\REST API Following CLEAN ARCHITECTURE & DDD Tutorial - Amichai Mantinband\SportGym\SportGym.Api\bin\Debug\net10.0\System.IdentityModel.Tokens.Jwt.dll

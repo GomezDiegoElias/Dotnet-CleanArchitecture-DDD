@@ -15,3 +15,4 @@ D:\Documents\Proyectos Practicas y Cursos\REST API Following CLEAN ARCHITECTURE 
 D:\Documents\Proyectos Practicas y Cursos\REST API Following CLEAN ARCHITECTURE & DDD Tutorial - Amichai Mantinband\SportGym\SportGym.Infrastructure\bin\Debug\net10.0\SportGym.Domain.pdb
 D:\Documents\Proyectos Practicas y Cursos\REST API Following CLEAN ARCHITECTURE & DDD Tutorial - Amichai Mantinband\SportGym\SportGym.Infrastructure\obj\Debug\net10.0\SportGym.Infrastructure.csproj.AssemblyReference.cache
 D:\Documents\Proyectos Practicas y Cursos\REST API Following CLEAN ARCHITECTURE & DDD Tutorial - Amichai Mantinband\SportGym\SportGym.Infrastructure\obj\Debug\net10.0\SportGym.EDBF72F6.Up2Date
+D:\Documents\Proyectos Practicas y Cursos\REST API Following CLEAN ARCHITECTURE & DDD Tutorial - Amichai Mantinband\SportGym\SportGym.Infrastructure\obj\Debug\net10.0\SportGym.Infrastructure.sourcelink.json

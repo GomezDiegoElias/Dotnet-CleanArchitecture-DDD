@@ -1,6 +1,24 @@
 @url = http://localhost:5137
 
-GET {{url}}/weatherforecast/
-Accept: application/json
+###
+
+POST {{url}}/auth/register
+Content-Type: application/json
+
+{
+    "firstName": "Amichai",
+    "lastName": "Mantinband",
+    "email": "amichai.mantinband@example.com",
+    "password": "123456"
+}
+
+###
+POST {{url}}/auth/login
+Content-Type: application/json
+
+{
+    "email": "amichai.mantinband@example.com",
+    "password": "123456"
+}
 
 ###

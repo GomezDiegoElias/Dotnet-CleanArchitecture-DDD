@@ -9,3 +9,4 @@ D:\Documents\Proyectos Practicas y Cursos\REST API Following CLEAN ARCHITECTURE 
 D:\Documents\Proyectos Practicas y Cursos\REST API Following CLEAN ARCHITECTURE & DDD Tutorial - Amichai Mantinband\SportGym\SportGym.Contracts\obj\Debug\net10.0\refint\SportGym.Contracts.dll
 D:\Documents\Proyectos Practicas y Cursos\REST API Following CLEAN ARCHITECTURE & DDD Tutorial - Amichai Mantinband\SportGym\SportGym.Contracts\obj\Debug\net10.0\SportGym.Contracts.pdb
 D:\Documents\Proyectos Practicas y Cursos\REST API Following CLEAN ARCHITECTURE & DDD Tutorial - Amichai Mantinband\SportGym\SportGym.Contracts\obj\Debug\net10.0\ref\SportGym.Contracts.dll
+D:\Documents\Proyectos Practicas y Cursos\REST API Following CLEAN ARCHITECTURE & DDD Tutorial - Amichai Mantinband\SportGym\SportGym.Contracts\obj\Debug\net10.0\SportGym.Contracts.sourcelink.json

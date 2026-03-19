@@ -1,5 +1,12 @@
+using SportGym.Application;
+using SportGym.Infrastructure;
+
 var builder = WebApplication.CreateBuilder(args);
 {
+    builder.Services
+        .AddApplication()
+        .AddInfrastructure();
+
     builder.Services.AddControllers();
 
     // Add services to the container.

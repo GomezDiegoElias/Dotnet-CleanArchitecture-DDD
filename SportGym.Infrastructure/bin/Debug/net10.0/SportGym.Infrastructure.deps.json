@@ -1,0 +1,55 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v10.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v10.0": {
+      "SportGym.Infrastructure/1.0.0": {
+        "dependencies": {
+          "SportGym.Application": "1.0.0"
+        },
+        "runtime": {
+          "SportGym.Infrastructure.dll": {}
+        }
+      },
+      "SportGym.Application/1.0.0": {
+        "dependencies": {
+          "SportGym.Domain": "1.0.0"
+        },
+        "runtime": {
+          "SportGym.Application.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "SportGym.Domain/1.0.0": {
+        "runtime": {
+          "SportGym.Domain.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "SportGym.Infrastructure/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "SportGym.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "SportGym.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

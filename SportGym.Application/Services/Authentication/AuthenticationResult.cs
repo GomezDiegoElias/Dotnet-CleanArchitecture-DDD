@@ -1,9 +1,8 @@
+using SportGym.Domain.Entities;
+
 namespace SportGym.Application.Services.Authentication;
 
 public record AuthenticationResult(
-    Guid Id,
-    string FirstName,
-    string LastName,
-    string Email,
+    User User,
     string Token
 );

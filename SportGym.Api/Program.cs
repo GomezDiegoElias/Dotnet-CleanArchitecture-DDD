@@ -1,3 +1,5 @@
+using SportGym.Api.Filters;
+using SportGym.Api.Middleware;
 using SportGym.Application;
 using SportGym.Infrastructure;
 
@@ -7,21 +9,21 @@ var builder = WebApplication.CreateBuilder(args);
         .AddApplication()
         .AddInfrastructure(builder.Configuration);
 
+    //builder.Services.AddControllers(opt => opt.Filters.Add<ErrorHandlingFilterAttribute>());
     builder.Services.AddControllers();
 
-    // Add services to the container.
-    // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
     builder.Services.AddOpenApi();
 }
 
 var app = builder.Build();
 {
-    // Configure the HTTP request pipeline.
     if (app.Environment.IsDevelopment())
     {
         app.MapOpenApi();
     }
 
+    // app.UseMiddleware<ErrorHandlingMiddleware>();
+    app.UseExceptionHandler("/error");
     app.UseHttpsRedirection();
     app.MapControllers();
 

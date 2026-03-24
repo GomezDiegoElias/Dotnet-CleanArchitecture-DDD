@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using SportGym.Api.Filters;
 using SportGym.Application.Services.Authentication;
 using SportGym.Contracts.Authentication;
 
@@ -6,6 +7,7 @@ namespace SportGym.Api.Controllers;
 
 [ApiController]
 [Route("auth")]
+//[ErrorHandlingFilter]
 public class AuthenticationController : ControllerBase
 {
 

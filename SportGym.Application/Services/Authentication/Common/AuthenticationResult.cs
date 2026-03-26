@@ -1,6 +1,6 @@
 using SportGym.Domain.Entities;
 
-namespace SportGym.Application.Services.Authentication;
+namespace SportGym.Application.Services.Authentication.Common;
 
 public record AuthenticationResult(
     User User,

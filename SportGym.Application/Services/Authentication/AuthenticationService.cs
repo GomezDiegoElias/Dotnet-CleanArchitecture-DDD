@@ -1,3 +1,4 @@
+using SportGym.Application.Common.Errors;
 using SportGym.Application.Common.Interfaces.Authentication;
 using SportGym.Application.Common.Interfaces.Persistence;
 using SportGym.Domain.Entities;
@@ -20,7 +21,7 @@ public class AuthenticationService : IAuthenticationService
     // 1. Validate the user doesn't exist
     if (_userRepository.GetUserByEmail(email) is not null)
     {
-      throw new Exception("User with the given email already exists.");
+      throw new DuplicateEmailException();
     }
 
     // 2. Create user (generate unique ID) & Persist to DB

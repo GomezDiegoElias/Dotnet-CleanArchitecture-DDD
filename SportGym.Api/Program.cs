@@ -1,5 +1,5 @@
-using SportGym.Api.Filters;
-using SportGym.Api.Middleware;
+using Microsoft.AspNetCore.Mvc.Infrastructure;
+using SportGym.Api.Common.Errors;
 using SportGym.Application;
 using SportGym.Infrastructure;
 
@@ -9,8 +9,8 @@ var builder = WebApplication.CreateBuilder(args);
         .AddApplication()
         .AddInfrastructure(builder.Configuration);
 
-    //builder.Services.AddControllers(opt => opt.Filters.Add<ErrorHandlingFilterAttribute>());
     builder.Services.AddControllers();
+    builder.Services.AddSingleton<ProblemDetailsFactory, SportGymProblemDetailsFactory>();
 
     builder.Services.AddOpenApi();
 }
@@ -22,8 +22,8 @@ var app = builder.Build();
         app.MapOpenApi();
     }
 
-    // app.UseMiddleware<ErrorHandlingMiddleware>();
     app.UseExceptionHandler("/error");
+
     app.UseHttpsRedirection();
     app.MapControllers();
 

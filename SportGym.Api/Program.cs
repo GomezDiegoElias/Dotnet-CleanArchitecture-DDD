@@ -1,18 +1,13 @@
-using Microsoft.AspNetCore.Mvc.Infrastructure;
-using SportGym.Api.Common.Errors;
+using SportGym.Api;
 using SportGym.Application;
 using SportGym.Infrastructure;
 
 var builder = WebApplication.CreateBuilder(args);
 {
     builder.Services
+        .AddPresentation()
         .AddApplication()
         .AddInfrastructure(builder.Configuration);
-
-    builder.Services.AddControllers();
-    builder.Services.AddSingleton<ProblemDetailsFactory, SportGymProblemDetailsFactory>();
-
-    builder.Services.AddOpenApi();
 }
 
 var app = builder.Build();

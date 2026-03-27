@@ -1,5 +1,7 @@
 using ErrorOr;
+
 using MediatR;
+
 using SportGym.Application.Authentication.Common;
 
 namespace SportGym.Application.Authentication.Queries.Login;

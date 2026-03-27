@@ -1,0 +1,131 @@
+root = true
+
+# execute format: dotnet format --check --severity error
+
+########################################
+# General settings
+########################################
+[*]
+# 🔹 Character set (e.g. UTF-8 without BOM)
+charset = utf-8
+# 🔹 Line endings (CRLF for Windows, LF for Linux/macOS)
+end_of_line = crlf
+# 🔹 Ensure file ends with a blank line (helps with git diffs)
+insert_final_newline = true
+# 🔹 Use spaces instead of tabs for indentation
+indent_style = space
+# 🔹 Use 4 spaces per indentation level
+indent_size = 4
+# 🔹 Remove trailing whitespace at the end of lines
+trim_trailing_whitespace = true
+
+########################################
+# C# files
+########################################
+[*.cs]
+
+# 🔹 Usings
+# Example: 'using System;' goes first, separated by a blank line from 'using Microsoft.AspNetCore.Mvc;'
+dotnet_sort_system_directives_first = true
+dotnet_separate_import_directive_groups = true
+
+# 🔹 var preferences
+# Example: 'var count = 0;' instead of 'int count = 0;'
+csharp_style_var_for_built_in_types = true:suggestion
+# Example: 'var user = new User();' instead of 'User user = new User();'
+csharp_style_var_when_type_is_apparent = true:suggestion
+# Example: Keep taking explicit types like 'IUserRepository repo = Resolve();' instead of 'var repo = Resolve();'
+csharp_style_var_elsewhere = false:suggestion
+
+# 🔹 Modern expressions
+# Example: 'public string GetName() => "John";' instead of '{ return "John"; }'
+csharp_style_expression_bodied_methods = true:suggestion
+csharp_style_expression_bodied_constructors = false:suggestion
+# Example: 'if (obj is User user)' instead of 'var user = obj as User; if (user != null)'
+csharp_style_pattern_matching_over_is_with_cast_check = true:suggestion
+# Example: 'var name = user?.Name;' instead of 'if (user != null) { var name = user.Name; }'
+csharp_style_null_propagation = true:suggestion
+
+# 🔹 Properties
+# Example: 'public string Name { get; set; }' instead of using a private backing field if no logic is needed
+dotnet_style_prefer_auto_properties = true:suggestion
+
+# 🔹 readonly
+# Example: Suggests 'private readonly ILogger _logger;' if the field is never modified after initialization
+dotnet_style_readonly_field = true:suggestion
+
+# 🔹 this.
+# Example: Use 'Name = name;' instead of 'this.Name = name;'
+dotnet_style_qualification_for_field = false:suggestion
+dotnet_style_qualification_for_property = false:suggestion
+
+########################################
+# Naming conventions
+########################################
+
+# 🔹 Namespaces en PascalCase
+dotnet_naming_rule.namespaces_should_be_pascal_case.severity = error
+dotnet_naming_rule.namespaces_should_be_pascal_case.symbols = namespaces
+dotnet_naming_rule.namespaces_should_be_pascal_case.style = pascal_case_style
+
+dotnet_naming_symbols.namespaces.applicable_kinds = namespace
+
+# 🔹 Interfaces start with I
+# Example: 'public interface IUserRepository' instead of 'public interface UserRepository'
+dotnet_naming_rule.interfaces_should_start_with_i.severity = warning
+dotnet_naming_rule.interfaces_should_start_with_i.symbols = interfaces
+dotnet_naming_rule.interfaces_should_start_with_i.style = prefix_i
+
+dotnet_naming_symbols.interfaces.applicable_kinds = interface
+dotnet_naming_symbols.interfaces.applicable_accessibilities = *
+
+dotnet_naming_style.prefix_i.required_prefix = I
+dotnet_naming_style.prefix_i.capitalization = pascal_case
+
+# 🔹 PascalCase classes
+# Example: 'public class CreateUserCommand' instead of 'public class createUserCommand'
+dotnet_naming_rule.classes_should_be_pascal_case.severity = error
+dotnet_naming_rule.classes_should_be_pascal_case.symbols = classes
+dotnet_naming_rule.classes_should_be_pascal_case.style = pascal_case_style
+
+dotnet_naming_symbols.classes.applicable_kinds = class
+
+dotnet_naming_style.pascal_case_style.capitalization = pascal_case
+
+# 🔹 PascalCase methods
+# Example: 'public void HandleRequest()' instead of 'public void handleRequest()'
+dotnet_naming_rule.methods_should_be_pascal_case.severity = error
+dotnet_naming_rule.methods_should_be_pascal_case.symbols = methods
+dotnet_naming_rule.methods_should_be_pascal_case.style = pascal_case_style
+
+dotnet_naming_symbols.methods.applicable_kinds = method
+
+# 🔹 Private fields _camelCase
+# Example: 'private readonly IUserRepository _userRepository;' instead of 'private readonly IUserRepository userRepository;'
+dotnet_naming_rule.private_fields_should_be_camel_case.severity = error
+dotnet_naming_rule.private_fields_should_be_camel_case.symbols = private_fields
+dotnet_naming_rule.private_fields_should_be_camel_case.style = camel_case_with_underscore
+
+dotnet_naming_symbols.private_fields.applicable_kinds = field
+dotnet_naming_symbols.private_fields.applicable_accessibilities = private
+
+dotnet_naming_style.camel_case_with_underscore.required_prefix = _
+dotnet_naming_style.camel_case_with_underscore.capitalization = camel_case
+
+########################################
+# Useful rules for CQRS / Clean Arch
+########################################
+
+# 🔹 Use records for DTOs (suggestion)
+# Example: 'public record UserResult(string Name);' heavily preferred for immutable data transfer objects
+dotnet_style_prefer_record = true:suggestion
+
+# 🔹 Modern null checks
+# Example: 'var name = user?.Name ?? "Unknown";' instead of complex if/else null checking blocks
+dotnet_style_coalesce_expression = true:suggestion
+
+# 🔹 Avoid unnecessary code -> Object and Collection initializers
+# Example: 'var user = new User { Name = "John" };' instead of 'var user = new User(); user.Name = "John";'
+# Example: 'var list = new List<int> { 1, 2 };' instead of 'var list = new List<int>(); list.Add(1); list.Add(2);'
+dotnet_style_object_initializer = true:suggestion
+dotnet_style_collection_initializer = true:suggestion

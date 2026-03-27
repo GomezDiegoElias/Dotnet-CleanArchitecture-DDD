@@ -1,4 +1,5 @@
 using Mapster;
+
 using SportGym.Application.Authentication.Commands.Register;
 using SportGym.Application.Authentication.Common;
 using SportGym.Application.Authentication.Queries.Login;
@@ -8,18 +9,18 @@ namespace SportGym.Api.Common.Mapping;
 
 public class AuthenticationMappingConfig : IRegister
 {
-  public AuthenticationMappingConfig()
-  {
-  }
+    public AuthenticationMappingConfig()
+    {
+    }
 
-  public void Register(TypeAdapterConfig config)
-  {
-    // Aunque estos dos son redundantes, esta bueno porque estamos al tanto de los diversos mapeos 
-    // y tambien si alguien necesita configurar algo especial, sepa exactamente donde hacerlo
-    config.NewConfig<RegisterRequest, RegisterCommand>();
-    config.NewConfig<LoginRequest, LoginQuery>();
+    public void Register(TypeAdapterConfig config)
+    {
+        // Aunque estos dos son redundantes, esta bueno porque estamos al tanto de los diversos mapeos 
+        // y tambien si alguien necesita configurar algo especial, sepa exactamente donde hacerlo
+        config.NewConfig<RegisterRequest, RegisterCommand>();
+        config.NewConfig<LoginRequest, LoginQuery>();
 
-    config.NewConfig<AuthenticationResult, AuthenticationResponse>()
-      .Map(dest => dest, src => src.User);
-  }
+        config.NewConfig<AuthenticationResult, AuthenticationResponse>()
+          .Map(dest => dest, src => src.User);
+    }
 }

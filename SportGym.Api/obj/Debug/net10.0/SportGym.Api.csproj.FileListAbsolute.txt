@@ -51,3 +51,6 @@ D:\Documents\Proyectos Practicas y Cursos\REST API Following CLEAN ARCHITECTURE 
 D:\Documents\Proyectos Practicas y Cursos\REST API Following CLEAN ARCHITECTURE & DDD Tutorial - Amichai Mantinband\SportGym\SportGym.Api\bin\Debug\net10.0\Mapster.dll
 D:\Documents\Proyectos Practicas y Cursos\REST API Following CLEAN ARCHITECTURE & DDD Tutorial - Amichai Mantinband\SportGym\SportGym.Api\bin\Debug\net10.0\Mapster.Core.dll
 D:\Documents\Proyectos Practicas y Cursos\REST API Following CLEAN ARCHITECTURE & DDD Tutorial - Amichai Mantinband\SportGym\SportGym.Api\bin\Debug\net10.0\Mapster.DependencyInjection.dll
+D:\Documents\Proyectos Practicas y Cursos\REST API Following CLEAN ARCHITECTURE & DDD Tutorial - Amichai Mantinband\SportGym\SportGym.Api\bin\Debug\net10.0\FluentValidation.dll
+D:\Documents\Proyectos Practicas y Cursos\REST API Following CLEAN ARCHITECTURE & DDD Tutorial - Amichai Mantinband\SportGym\SportGym.Api\bin\Debug\net10.0\FluentValidation.AspNetCore.dll
+D:\Documents\Proyectos Practicas y Cursos\REST API Following CLEAN ARCHITECTURE & DDD Tutorial - Amichai Mantinband\SportGym\SportGym.Api\bin\Debug\net10.0\FluentValidation.DependencyInjectionExtensions.dll

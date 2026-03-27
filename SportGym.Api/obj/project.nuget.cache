@@ -1,10 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "za0V35EyfqA=",
+  "dgSpecHash": "QoybJnF1EvQ=",
   "success": true,
   "projectFilePath": "D:\\Documents\\Proyectos Practicas y Cursos\\REST API Following CLEAN ARCHITECTURE & DDD Tutorial - Amichai Mantinband\\SportGym\\SportGym.Api\\SportGym.Api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Usuario\\.nuget\\packages\\erroror\\2.0.1\\erroror.2.0.1.nupkg.sha512",
+    "C:\\Users\\Usuario\\.nuget\\packages\\fluentvalidation\\12.1.1\\fluentvalidation.12.1.1.nupkg.sha512",
+    "C:\\Users\\Usuario\\.nuget\\packages\\fluentvalidation.aspnetcore\\11.3.1\\fluentvalidation.aspnetcore.11.3.1.nupkg.sha512",
+    "C:\\Users\\Usuario\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\11.11.0\\fluentvalidation.dependencyinjectionextensions.11.11.0.nupkg.sha512",
     "C:\\Users\\Usuario\\.nuget\\packages\\mapster\\10.0.6\\mapster.10.0.6.nupkg.sha512",
     "C:\\Users\\Usuario\\.nuget\\packages\\mapster.core\\10.0.6\\mapster.core.10.0.6.nupkg.sha512",
     "C:\\Users\\Usuario\\.nuget\\packages\\mapster.dependencyinjection\\10.0.6\\mapster.dependencyinjection.10.0.6.nupkg.sha512",

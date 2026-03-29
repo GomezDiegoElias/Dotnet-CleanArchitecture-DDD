@@ -1,0 +1,10 @@
+@url = http://localhost:5137
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NDkyMzU1NC05NjQyLTQ2NjctOTE0ZC1hZTFlNWMwMWU3OWIiLCJnaXZlbl9uYW1lIjoiQW1pY2hhaSIsImZhbWlseV9uYW1lIjoiTWFudGluYmFuZCIsImp0aSI6IjFmYmYwN2UxLWZjZWEtNDA5OC04Mzg0LTBiMTQ1OGFlZmU5MiIsImV4cCI6MTc3NDc5NzczMSwiaXNzIjoiU3BvcnRHeW0iLCJhdWQiOiJTcG9ydEd5bSJ9.WAyEI8Q8-XIkswZ_f84C1i9LZZPmKKisZ5a6h5P6W2A
+
+###
+
+GET {{url}}/api/user
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+###

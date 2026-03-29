@@ -20,6 +20,9 @@ var app = builder.Build();
     //app.UseExceptionHandler("/error");
     app.UseExceptionHandler(); // Use the default exception handler which will invoke our IExceptionHandler implementations
 
+    app.UseAuthentication();
+    app.UseAuthorization();
+
     app.UseHttpsRedirection();
     app.MapControllers();
 

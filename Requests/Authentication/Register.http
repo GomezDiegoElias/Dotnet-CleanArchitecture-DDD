@@ -2,7 +2,7 @@
 
 ###
 
-POST {{url}}/auth/register
+POST {{url}}/api/authentication/register
 Content-Type: application/json
 
 {

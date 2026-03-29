@@ -4,6 +4,7 @@ using MapsterMapper;
 
 using MediatR;
 
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 using SportGym.Application.Authentication.Commands.Register;
@@ -14,7 +15,8 @@ using SportGym.Domain.Common.Errors;
 
 namespace SportGym.Api.Controllers;
 
-[Route("auth")]
+[Route("api/[controller]")]
+[AllowAnonymous]
 public class AuthenticationController : ApiController
 {
     private readonly ISender _mediator;

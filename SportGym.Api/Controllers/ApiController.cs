@@ -1,5 +1,6 @@
 using ErrorOr;
 
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 
@@ -8,6 +9,7 @@ using SportGym.Api.Common.Http;
 namespace SportGym.Api.Controllers;
 
 [ApiController]
+[Authorize]
 public class ApiController : ControllerBase
 {
 

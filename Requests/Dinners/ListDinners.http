@@ -1,8 +1,0 @@
-@url = http://localhost:5137
-@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjZTM2MTUzNS02MzZlLTQ0ODgtOWI0NS04MjE3MWYxN2RlMGIiLCJnaXZlbl9uYW1lIjoiRGllZ28iLCJmYW1pbHlfbmFtZSI6IkdvbWV6IiwianRpIjoiOTc1MTFmZWUtZjgyNS00MzQ5LWJkNGUtZDQwZTNjOTFhZmQ3IiwiZXhwIjoxNzc0ODAyOTk0LCJpc3MiOiJCdWJlckRpbm5lciIsImF1ZCI6IkJ1YmVyRGlubmVyIn0.JYc4IpbuNXCi4V04uYMlloxp1sPOJq7Wcf1afT-XhPk
-
-GET {{url}}/api/dinners
-Content-Type: application/json
-Authorization: Bearer {{token}}
-
-###

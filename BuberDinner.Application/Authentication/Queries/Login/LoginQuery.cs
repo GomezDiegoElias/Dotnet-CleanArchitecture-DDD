@@ -1,8 +1,8 @@
+using BuberDinner.Application.Authentication.Common;
+
 using ErrorOr;
 
 using MediatR;
-
-using BuberDinner.Application.Authentication.Common;
 
 namespace BuberDinner.Application.Authentication.Queries.Login;
 

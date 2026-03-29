@@ -1,0 +1,23 @@
+﻿using BuberDinner.Domain.Common.Models;
+
+namespace BuberDinner.Domain.UserAggregate.ValueObjects;
+
+public sealed class UserRatingId : ValueObject
+{
+    public Guid Value { get; }
+
+    private UserRatingId(Guid value)
+    {
+        Value = value;
+    }
+
+    public static UserRatingId CreateUnique()
+    {
+        return new(Guid.NewGuid());
+    }
+
+    public override IEnumerable<object> GetEqualityComponents()
+    {
+        yield return Value;
+    }
+}

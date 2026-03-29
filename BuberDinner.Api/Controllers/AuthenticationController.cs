@@ -1,3 +1,9 @@
+using BuberDinner.Application.Authentication.Commands.Register;
+using BuberDinner.Application.Authentication.Common;
+using BuberDinner.Application.Authentication.Queries.Login;
+using BuberDinner.Contracts.Authentication;
+using BuberDinner.Domain.Common.Errors;
+
 using ErrorOr;
 
 using MapsterMapper;
@@ -6,12 +12,6 @@ using MediatR;
 
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-
-using BuberDinner.Application.Authentication.Commands.Register;
-using BuberDinner.Application.Authentication.Common;
-using BuberDinner.Application.Authentication.Queries.Login;
-using BuberDinner.Contracts.Authentication;
-using BuberDinner.Domain.Common.Errors;
 
 namespace BuberDinner.Api.Controllers;
 

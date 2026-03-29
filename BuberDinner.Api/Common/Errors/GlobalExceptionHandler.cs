@@ -21,8 +21,8 @@ public sealed class GlobalExceptionHandler : IExceptionHandler
 
         await _problemDetailsService.WriteAsync(new ProblemDetailsContext
         {
-           HttpContext = httpContext,
-           ProblemDetails =
+            HttpContext = httpContext,
+            ProblemDetails =
             {
                 Title = "An unexpected error occurred.",
                 Status = StatusCodes.Status500InternalServerError,

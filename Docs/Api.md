@@ -1,19 +1,19 @@
-# SportGym API
+# BuberDinner API
 
-Documentation for the current REST API implementation of the SportGym project.
+Documentation for the current REST API implementation of the BuberDinner project.
 
 ## Base URL
 
 - HTTP (Development): `http://localhost:5137`
 - HTTPS (Development): `https://localhost:7205`
 
-> Defined in `SportGym.Api/Properties/launchSettings.json`.
+> Defined in `BuberDinner.Api/Properties/launchSettings.json`.
 
 ## Prerequisites
 
 Before testing authenticated endpoints, configure a JWT secret in:
 
-- `SportGym.Api/appsettings.Development.json`
+- `BuberDinner.Api/appsettings.Development.json`
 
 Example:
 
@@ -21,8 +21,8 @@ Example:
 "JwtSettings": {
 	"Secret": "your-long-secure-secret",
 	"ExpiryMinutes": 60,
-	"Issuer": "SportGym",
-	"Audience": "SportGym"
+	"Issuer": "BuberDinner",
+	"Audience": "BuberDinner"
 }
 ```
 
@@ -152,10 +152,10 @@ For input validation failures (FluentValidation), the API returns `400 Bad Reque
 }
 ```
 
-## 3. List Users
+## 3. List Dinners
 
 - **Method:** `GET`
-- **Route:** `/api/user`
+- **Route:** `/api/dinners`
 - **Auth:** Yes (Bearer JWT)
 
 ### Headers
@@ -194,7 +194,7 @@ You can use these files included in the repository:
 
 - `Requests/Authentication/Register.http`
 - `Requests/Authentication/Login.http`
-- `Requests/Users/ListUsers.http`
+- `Requests/Dinners/ListDinners.http`
 
 ## Implementation Notes
 

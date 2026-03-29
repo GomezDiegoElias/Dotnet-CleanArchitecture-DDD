@@ -17,7 +17,8 @@ var app = builder.Build();
         app.MapOpenApi();
     }
 
-    app.UseExceptionHandler("/error");
+    //app.UseExceptionHandler("/error");
+    app.UseExceptionHandler(); // Use the default exception handler which will invoke our IExceptionHandler implementations
 
     app.UseHttpsRedirection();
     app.MapControllers();

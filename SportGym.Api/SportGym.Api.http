@@ -1,6 +1,0 @@
-@url = http://localhost:5137
-
-GET {{url}}/weatherforecast/
-Accept: application/json
-
-###

@@ -1,4 +1,6 @@
+using BuberDinner.Domain.Common.Models;
 using BuberDinner.Domain.MenuAggregate;
+using BuberDinner.Infrastructure.Persistence.Interceptors;
 
 using Microsoft.EntityFrameworkCore;
 
@@ -6,9 +8,14 @@ namespace BuberDinner.Infrastructure.Persistence;
 
 public class BuberDinnerDbContext : DbContext
 {
+    private readonly PublishDomainEventsInterceptor _publishDomainEventsInterceptor;
 
-    public BuberDinnerDbContext(DbContextOptions<BuberDinnerDbContext> options) : base(options)
+    public BuberDinnerDbContext(
+        DbContextOptions<BuberDinnerDbContext> options,
+        PublishDomainEventsInterceptor publishDomainEventsInterceptor
+    ) : base(options)
     {
+        _publishDomainEventsInterceptor = publishDomainEventsInterceptor;
     }
 
     public DbSet<Menu> Menus { get; set; } = null!;
@@ -17,7 +24,14 @@ public class BuberDinnerDbContext : DbContext
     {
         base.OnModelCreating(modelBuilder);
 
-        modelBuilder.ApplyConfigurationsFromAssembly(typeof(BuberDinnerDbContext).Assembly);
+        modelBuilder
+            .Ignore<List<IDomainEvent>>()
+            .ApplyConfigurationsFromAssembly(typeof(BuberDinnerDbContext).Assembly);
     }
-    
+
+    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+    {
+        optionsBuilder.AddInterceptors(_publishDomainEventsInterceptor);
+        base.OnConfiguring(optionsBuilder);
+    }
 }

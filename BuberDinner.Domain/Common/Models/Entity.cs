@@ -11,7 +11,7 @@ public abstract class Entity<TId> : IEquatable<Entity<TId>>
 
     public override bool Equals(object? obj)
     {
-        return obj is Entity<TId> entity && this.Id.Equals(entity.Id);
+        return obj is Entity<TId> entity && this.Id != null && this.Id.Equals(entity.Id);
     }
 
     public static bool operator ==(Entity<TId> left, Entity<TId> right)
@@ -31,6 +31,13 @@ public abstract class Entity<TId> : IEquatable<Entity<TId>>
 
     public override int GetHashCode()
     {
-        return this.Id.GetHashCode();
+        return this.Id != null ? this.Id.GetHashCode() : 0;
     }
+
+    #pragma warning disable CS8618
+    protected Entity()
+    {
+        
+    }
+    #pragma warning restore CS8618
 }

@@ -39,7 +39,7 @@ public abstract class ValueObject : IEquatable<ValueObject>
     }
 }
 
-public class Price : ValueObject
+/* public class Price : ValueObject
 {
     public Price(decimal amount, string currency)
     {
@@ -55,4 +55,4 @@ public class Price : ValueObject
         yield return Amount;
         yield return Currency;
     }
-}
+} */

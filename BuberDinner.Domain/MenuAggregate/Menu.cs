@@ -23,7 +23,6 @@ public sealed class Menu : AggregateRoot<MenuId>
     public DateTime CreatedDateTime { get; private set; }
     public DateTime UpdatedDateTime { get; private set; }
 
-
     private Menu(MenuId menuId, HostId hostId, string name, string description, List<MenuSection> sections, DateTime createdDateTime, DateTime updatedDateTime)
         : base(menuId)
     {
@@ -40,4 +39,11 @@ public sealed class Menu : AggregateRoot<MenuId>
     {
         return new(MenuId.CreateUnique(), hostId, name, description, sections, DateTime.UtcNow, DateTime.UtcNow);
     }
+
+    #pragma warning disable CS8618
+    private Menu()
+    {
+        
+    }
+    #pragma warning restore CS8618
 }

@@ -1,6 +1,9 @@
 using BuberDinner.Api;
 using BuberDinner.Application;
 using BuberDinner.Infrastructure;
+using BuberDinner.Infrastructure.Persistence;
+
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 {
@@ -25,6 +28,10 @@ var app = builder.Build();
 
     app.UseHttpsRedirection();
     app.MapControllers();
+
+    using var scope = app.Services.CreateScope();
+    var db = scope.ServiceProvider.GetRequiredService<BuberDinnerDbContext>();
+    await db.Database.MigrateAsync();
 
     app.Run();
 }

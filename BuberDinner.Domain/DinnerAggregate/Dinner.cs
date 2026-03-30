@@ -22,12 +22,11 @@ public sealed class Dinner : AggregateRoot<DinnerId>
     public DateTime CreatedDateTime { get; }
     public DateTime UpdatedDateTime { get; }
 
-    public DinnerStatus Status { get; } // Upcoming, InProgress, Ended, Cancelled
+    public DinnerStatus Status { get; }
 
     public bool IsPublic { get; }
     public int MaxGuests { get; }
 
-    public Price Price { get; }
     public HostId HostId { get; }
     public UserId MenuId { get; }
 
@@ -46,7 +45,6 @@ public sealed class Dinner : AggregateRoot<DinnerId>
         DinnerStatus status,
         bool isPublic,
         int maxGuests,
-        Price price,
         HostId hostId,
         UserId menuId,
         string imageUrl,
@@ -62,7 +60,6 @@ public sealed class Dinner : AggregateRoot<DinnerId>
         Status = status;
         IsPublic = isPublic;
         MaxGuests = maxGuests;
-        Price = price;
         HostId = hostId;
         MenuId = menuId;
         ImageUrl = imageUrl;
@@ -76,12 +73,11 @@ public sealed class Dinner : AggregateRoot<DinnerId>
         DateTime endDateTime,
         bool isPublic,
         int maxGuests,
-        Price price,
         HostId hostId,
         UserId menuId,
         string imageUrl,
         Location location)
     {
-        return new(DinnerId.CreateUnique(), name, description, startDateTime, endDateTime, DateTime.UtcNow, DateTime.UtcNow, DinnerStatus.Upcoming, isPublic, maxGuests, price, hostId, menuId, imageUrl, location);
+        return new(DinnerId.CreateUnique(), name, description, startDateTime, endDateTime, DateTime.UtcNow, DateTime.UtcNow, DinnerStatus.Upcoming, isPublic, maxGuests, hostId, menuId, imageUrl, location);
     }
 }

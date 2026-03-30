@@ -30,7 +30,7 @@ public class CreateMenuCommandHandler : IRequestHandler<CreateMenuCommand, Error
                     item.Name,
                     item.Description)))));
 
-        _menuRepository.Add(menu);
+        _menuRepository.AddAsync(menu);
         
         return menu;
     }

@@ -9,5 +9,9 @@
   "search.exclude": {
     "**/bin": true,
     "**/obj": true
+  },
+  "files.associations": {
+    "*.props": "xml",
+    "*.targets": "xml"
   }
 }

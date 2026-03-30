@@ -1,19 +1,42 @@
 <Project>
   <ItemGroup>
+    
+    <!-- Mapping -->
     <PackageVersion Include="Mapster" Version="10.0.6" />
     <PackageVersion Include="Mapster.DependencyInjection" Version="10.0.6" />
+    
+    <!-- API -->
     <PackageVersion Include="Microsoft.AspNetCore.OpenApi" Version="10.0.2" />
-    <PackageVersion Include="Microsoft.EntityFrameworkCore.Design" Version="10.0.5" />
-    <PackageVersion Include="FluentValidation" Version="12.1.1" />
-    <PackageVersion Include="FluentValidation.AspNetCore" Version="11.3.1" />
-    <PackageVersion Include="MediatR" Version="14.1.0" />
-    <PackageVersion Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="10.0.5" />
-    <PackageVersion Include="ErrorOr" Version="2.0.1" />
-    <PackageVersion Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="10.0.5" />
+    
+    <!-- EF Core -->
     <PackageVersion Include="Microsoft.EntityFrameworkCore" Version="10.0.5" />
     <PackageVersion Include="Microsoft.EntityFrameworkCore.Sqlite" Version="10.0.5" />
+    <PackageVersion Include="Microsoft.EntityFrameworkCore.Design" Version="10.0.5" />
+    
+    <!-- Validation -->
+    <PackageVersion Include="FluentValidation" Version="12.1.1" />
+    <PackageVersion Include="FluentValidation.AspNetCore" Version="11.3.1" />
+
+    <!-- CQRS -->
+    <PackageVersion Include="MediatR" Version="14.1.0" />
+
+    <!-- Extensions -->
+    <PackageVersion Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="10.0.5" />
     <PackageVersion Include="Microsoft.Extensions.Configuration" Version="10.0.5" />
     <PackageVersion Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="10.0.5" />
+
+    <!-- Error Handling -->
+    <PackageVersion Include="ErrorOr" Version="2.0.1" />
+
+    <!-- Authentication -->
+    <PackageVersion Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="10.0.5" />
     <PackageVersion Include="System.IdentityModel.Tokens.Jwt" Version="8.16.0" />
+    
+    <!-- Testing -->
+    <PackageVersion Include="coverlet.collector" Version="6.0.4" />
+    <PackageVersion Include="Microsoft.NET.Test.Sdk" Version="17.14.1" />
+    <PackageVersion Include="xunit" Version="2.9.3" />
+    <PackageVersion Include="xunit.runner.visualstudio" Version="3.1.4" />
+  
   </ItemGroup>
 </Project>
